@@ -1,10 +1,12 @@
-package com.example.yourapp.repository;
+package com.alief.expensesplitter.repository;
 
 import android.content.Context;
 
-import com.example.yourapp.dao.ExpenseDao;
-import com.example.yourapp.database.AppDatabase;
-import com.example.yourapp.model.Expense;
+import androidx.lifecycle.LiveData;
+
+import com.alief.expensesplitter.dao.ExpenseDao;
+import com.alief.expensesplitter.database.AppDatabase;
+import com.alief.expensesplitter.model.Expense;
 
 import java.util.List;
 
@@ -25,7 +27,7 @@ public class ExpenseRepository {
         new Thread(() -> expenseDao.delete(expense)).start();
     }
 
-    public List<Expense> getByProjectId(int projectId) {
-        return expenseDao.getByProjectId(projectId);
+    public LiveData<List<Expense>> getExpensesByProjectId(int projectId) {
+        return expenseDao.getExpensesByProjectId(projectId);
     }
 }

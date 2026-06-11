@@ -1,10 +1,10 @@
-package com.example.yourapp.repository;
+package com.alief.expensesplitter.repository;
 
 import android.content.Context;
 
-import com.example.yourapp.dao.ExpenseItemDao;
-import com.example.yourapp.database.AppDatabase;
-import com.example.yourapp.model.ExpenseItem;
+import com.alief.expensesplitter.dao.ExpenseItemDao;
+import com.alief.expensesplitter.database.AppDatabase;
+import com.alief.expensesplitter.model.ExpenseItem;
 
 import java.util.List;
 
